@@ -5,8 +5,11 @@
 		xmlns:v="urn:schemas-microsoft-com:vml"
 		xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
-	<!-- Please leave these comments somewhere in this code -->
-	<!-- Forked from Square Balloons creation - https://www.squareballoon.co.uk , Forked from Nicole Merlin https://webdesign.tutsplus.com/tutorials/creating-a-future-proof-responsive-email-without-media-queries--cms-23919 -->
+	<!--
+		Please leave these comments somewhere in this code
+		Forked from Square Balloons creation - https://www.squareballoon.co.uk
+		who forked from Nicole Merlin https://webdesign.tutsplus.com/tutorials/creating-a-future-proof-responsive-email-without-media-queries--cms-23919
+	-->
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<!--[if !mso]><!-->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -164,10 +167,6 @@
 	/* sb-Buttons */
 
 		/* Outter sb-Button */
-		.sb-button-outter {
-			padding-left:50px;
-			padding-right:50px;
-		}
 		.sb-button a {
 			text-decoration: none;
 			text-align: center;
@@ -242,6 +241,51 @@
 	/* END BACKGROUND IMAGE */
 
 
+		/* sb-ButtonS */
+
+		/* Outer sb-Button */
+		.sb-Button-Outer {
+			width: 200px;
+			max-width: 200px;
+			padding-bottom: 20px;
+		}
+		.two-column .sb-Button-Outer {
+			padding-bottom: 0;
+		}
+		.three-Button .sb-Button-Outer {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		.sb-Button a {
+			text-decoration: none;
+			text-align: center;
+			width: 100%;
+			color: #ffffff;
+			text-transform: uppercase;
+		}
+		.sb-Button a:link, .sb-Button a:visited, .sb-Button a:hover { color: #ffffff; }
+		.sb-Button.lower a {
+			text-transform: capitalize;
+		}
+		/* End Outer sb-Button */
+
+		/* sb-Padding-Top sb-Button */
+		.variable-Button {
+			padding-left: 20px;
+			padding-right: 20px;
+			width: auto !important;
+			max-width: auto !important;
+			background-color: #636363;
+			vertical-align: middle;
+			padding-top: 8px;
+			padding-bottom:8px;
+			color: #ffffff;
+			text-align:center;
+			text-transform: uppercase;
+		}
+		/* End sb-Padding-Top sb-Button */
+
+		/* END sb-Buttons */
 
 
 	/* COLUMNS */
@@ -402,7 +446,16 @@
 			text-transform: uppercase;
 			font-size: 13px;
 			font-weight: normal;
-		}		
+		}
+
+		/* Buttons */
+		.three-column .contents.sb-Button {
+			text-align: center;
+		}
+		.three-column .column-183 .sb-Button {
+			width: 183px;
+			max-width: 183px;
+		}
 
 
 		/*Media Queries*/
@@ -442,6 +495,14 @@
 					padding-bottom: 10px !important;					
 				}				
 				/* End Media Small */
+
+			/* Buttons */
+			.two-column .column .sb-Button {
+				width: 200px !important;
+				max-width: 200px !important;
+				padding-bottom: 10px !important;
+			}
+			/* End Buttons */
 
 			/* Three Columns */
 			.three-column .column {
@@ -486,9 +547,16 @@
 				width: 100% !important;
 			}			
 
+			/* Buttons */
+			.two-column .column .sb-Button {
+				width: 200px !important;
+				max-width: 200px !important;
+				padding-bottom: 10px !important;
+			}
 			.sb-Button {
 				 width:100% !important;
-			}					
+			}
+			/* End Buttons */
 
 				/* Logo */
 				.logo .two-column .column img {
@@ -552,9 +620,8 @@
 				<tr>
 					<td>
 
-
+						<!-- Logo  -->
 						<div class="logo">
-							<!-- Two Columns image left -->
 							<table width="100%">
 								<tr>
 									<td class="two-column">
@@ -607,9 +674,8 @@
 									</td>
 								</tr>
 							</table>
-							<!-- End Two Columns image left -->
 						</div>
-							
+						<!-- End Logo -->
 
 						<!-- Full width background image with content.  Image is full width but 200px high -->
                         <div mc:repeatable="options" mc:variant="Background image with text on top">
@@ -663,7 +729,6 @@
 
                         <!-- Full width Image with padding -->
 						<div mc:repeatable="options" mc:variant="Full Width Image with padding">
-							<!-- Image with Gutter -->
 							<table cellpadding="0" cellspacing="0" border="0" width="100%">
 								<tr>
 									<td class="full-width-image sb-padding">
@@ -726,7 +791,6 @@
 
                         <!-- TWO COLUMN MEDIA ABOVE -->
                         <div mc:repeatable="options" mc:variant="Media Above" class="media">
-                            <!-- 2 Column sb-Buttons -->
                             <table cellpadding="0" cellspacing="0" border="0" width="100%">
                                 <tr>
                                     <td class="two-column sb-padding">
@@ -800,7 +864,6 @@
                                     </td>
                                 </tr>
                             </table>
-                            <!-- End Title -->
                         </div>
 
                         <!-- END TWO COLUMN MEDIA ABOVE -->
@@ -808,7 +871,6 @@
 
 						<!-- TWO COLUMN MEDIA LEFT -->					
 						<div mc:repeatable="options" mc:variant="Media Left" class="media media-left">
-							<!-- 2 Column sb-Buttons -->
 							<table cellpadding="0" cellspacing="0" border="0" width="100%">
 								<tr>
 									<td class="two-column sb-padding">
@@ -871,7 +933,6 @@
 									</td>
 								</tr>
 							</table>
-							<!-- End Title -->
 						</div>
 
 						<!-- END TWO COLUMN MEDIA LEFT -->
@@ -879,7 +940,6 @@
 
 						<!-- TWO COLUMN MEDIA RIGHT -- works on mobile without responsive -->
 						<div mc:repeatable="options" mc:variant="Media Left" class="media media-left">
-							<!-- 2 Column sb-Buttons -->
 							<table cellpadding="0" cellspacing="0" border="0" width="100%">
 								<tr>
 									<td class="two-column sb-padding" dir="rtl">
@@ -942,7 +1002,6 @@
 									</td>
 								</tr>
 							</table>
-							<!-- End Title -->
 						</div>
 
 						<!-- END TWO COLUMN MEDIA RIGHT -->	
@@ -950,7 +1009,6 @@
 
 						<!-- TWO COLUMN MEDIA LEFT small -->					
 						<div mc:repeatable="options" mc:variant="Media Left Small" class="media media-left">
-							<!-- 2 Column sb-Buttons -->
 							<table cellpadding="0" cellspacing="0" border="0" width="100%">
 								<tr>
 									<td class="two-column sb-padding">
@@ -1013,7 +1071,6 @@
 									</td>
 								</tr>
 							</table>
-							<!-- End Title -->
 						</div>
 
 						<!-- END TWO COLUMN MEDIA LEFT small -->	
@@ -1021,7 +1078,6 @@
 
 						<!-- TWO COLUMN MEDIA RIGHT Small -->
 						<div mc:repeatable="options" mc:variant="Media Right Small" class="media media-right">
-							<!-- 2 Column sb-Buttons -->
 							<table cellpadding="0" cellspacing="0" border="0" width="100%">
 								<tr>
 									<td class="two-column sb-padding" dir="rtl">
@@ -1084,10 +1140,8 @@
 									</td>
 								</tr>
 							</table>
-							<!-- End Title -->
 						</div>
-
-						<!-- END TWO COLUMN MEDIA RIGHT small -->	
+						<!-- END TWO COLUMN MEDIA RIGHT small -->
 
 
 						<!-- Three Columns -->
@@ -1169,9 +1223,53 @@
 								</tr>
 							</table>
 						</div>		
-						<!-- End Three Columns -->																
+						<!-- End Three Columns -->
 
-						
+
+						<!-- One button with a variable width that stretches to fit the words and contains padding -->
+						<div mc:repeatable="options" mc:variant="One Variable Width Button">
+							<table cellpadding="0" cellspacing="0" border="0" width="100%">
+								<tr>
+									<td class="one-column">
+										<div class="column">
+											<table cellpadding="0" cellspacing="0" border="0" width="100%">
+												<tr>
+													<td class="sb-Padding-Top">
+														<table cellpadding="0" cellspacing="0" border="0" width="100%" class="contents">
+															<tr>
+																<td class="contents sb-Padding">
+																	<table cellpadding="0" cellspacing="0" border="0" width="100%" style="table-layout: auto;">
+																		<tr>
+																			<td style="width: 1%; white-space: nowrap;">
+																				<center>
+																					<table cellpadding="0" cellspacing="0" border="0">
+																						<tr>
+																							<td class="text bg-Brown variable-Button">
+																								<a href="http://www.venturefounders.co.uk" mc:edit="Variable Button">
+																									As many characters as you want
+																								</a>
+																							</td>
+																						</tr>
+																					</table>
+																				</center>
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!-- End One button with a variable width that stretches to fit the words and contains padding -->
+
+
+
 						<!-- Full width slashes blue -->
 						<div mc:repeatable="options" mc:variant="Full Width Slashes Blue">
 							<table width="100%">
