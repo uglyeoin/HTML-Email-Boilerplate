@@ -12,7 +12,13 @@ This is a work in progress, it can be improved quote a lot consider this my firs
 
 Just look in the code it's all commented.  There are also MailChimp tags so it will work immediately in MailChimp.
 
-If you want support just raise an issue and I'll see if I can help.  This is a part time project I'm not going to troubleshoot email issues that are not created by the template as is.  You can use Stack Exchange for that.
+## Where to get support
+
+If you find an issue with the code, please raise an issue or submit a pull request.  
+
+I'm not going to troubleshoot email issues that are not created by the template as is.  You can use [Stack Overflow](https://stackoverflow.com) for that.
+
+If you want commercial (paid) support, designs, codes etc please contact me via my website [Square Balloon](https://www.squareballoon.co.uk)
 
 ### How to remove MailChimp.
 
@@ -24,8 +30,8 @@ mc:repeatable="options"
 mc:variant="  XXXX   " where x is the text
 mc:edit
 
-*|UNSUB|* - MailChimps unsubscribe link
-*|UPDATE_PROFILE|* - MailChimps update profile link
+\*|UNSUB|* - MailChimps unsubscribe link
+\*|UPDATE_PROFILE|* - MailChimps update profile link
 
  ## Can I use this commercially
  
