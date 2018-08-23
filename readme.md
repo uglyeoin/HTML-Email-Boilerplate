@@ -1,4 +1,4 @@
-# A HTML Email Boilerplate
+# A Responsive Fluid/Hybrid HTML Email Boilerplate
 
 First of all I would like to thank and give full credit to [Nicole Merline for this excellent tutorial](https://webdesign.tutsplus.com/tutorials/creating-a-future-proof-responsive-email-without-media-queries--cms-23919) which I based this code upon.
 
@@ -7,10 +7,27 @@ I have changed the images to include image sizes as that makes life easier when 
 I changed some naming conventions too.
 
 This is a work in progress, it can be improved quote a lot consider this my first draft (in reality about 101st).
+Once we fully test we'll supply screenshots.  
+
+## Main Features
+1. Responsive using fluid hybrid
+2. Left text with right media acts responsively with the image above the text
+3. Background images are created using the [camapign monitor](https://backgrounds.cm/) way of doing things
+4. Custom fonts are implemented in a way that doesn't break in MS Outlook.  Custom fonts will not show in Outlook and some other email clients so you should be aware of that.  They will fall back to the font within the template.
+5. A button that expands to any width depending on the text inside it.
+6. Easy to adjust padding settings
+7. Easy to implement colours and background colours
+8. A 3 column grid
+9. Some fixes to stop the 3 column grid from breaking in the MailChimp editor
+10. Full MailChimp editing support.  Including repeatable blocks that you can add, remove or move as you wish.  There are some problems with the MailChimp editor which are beyond our control.  We recommend not trying to move the bottom module but dragging the second bottom below it.
 
 ## How to use it
 
 Just look in the code it's all commented.  There are also MailChimp tags so it will work immediately in MailChimp.
+
+**Please resize images before you upload!  Do not expect the template to constrain the images.  Outlook will use the original size so resize them before you use**.
+
+ 
 
 ## Where to get support
 
