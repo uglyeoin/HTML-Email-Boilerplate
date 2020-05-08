@@ -1,0 +1,1295 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+		xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:mc="http://www.w3.org/1999/xhtml"
+		xmlns:v="urn:schemas-microsoft-com:vml"
+		xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+	<!--
+		Please leave these comments somewhere in this code
+		Forked from Square Balloons creation - https://www.squareballoon.co.uk
+		who forked from Nicole Merlin https://webdesign.tutsplus.com/tutorials/creating-a-future-proof-responsive-email-without-media-queries--cms-23919
+	-->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!--[if !mso]><!-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<!--<![endif]-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title></title>
+	<!-- fixing 120 dpi Outlook -->
+	<!--[if gte mso 9]>
+	<xml>
+		<o:OfficeDocumentSettings>
+			<o:AllowPNG/>
+			<o:PixelsPerInch>96</o:PixelsPerInch>
+		</o:OfficeDocumentSettings>
+	</xml>
+	<![endif]-->
+	<!-- End fixing 120 dpi outlook -->
+
+	<!-- Custom Fonts -->
+	<!--[if !mso]><!-- -->
+	<link href="https://fonts.googleapis.com/css?family=Khand" rel="stylesheet" type="text/css" />
+	<!--<![endif]-->
+	<!-- End Custom Fonts -->
+
+	<style type="text/css">
+		@media screen yahoo {
+			* {
+				overflow: visible!important
+			}
+			.y-overflow-hidden {
+				overflow: hidden!important
+			}
+		}
+
+		/* MailChimp Fixes - stops 3 column grid from looking broken due to MailChimps on site styling.  */
+		.tpl-content {
+			padding: 0 !important;
+		}
+		.tpl-repeatblock{border:none !important; outline: 1px dotted rgba(0,0,0,0.2); padding:0 !important;}
+		/* end MC fixes */
+
+	/* Basics */
+		body {
+			Margin: 0;
+			padding: 0;
+			min-width: 100%;
+			background-color: #959595;
+			color: #2f3131;
+			font-size: 13px;
+		}
+		table {
+			border-spacing: 0;
+			table-layout: fixed;
+			overflow: hidden;
+			border-collapse:collapse;
+			mso-table-lspace:0pt;
+			mso-table-rspace:0pt;
+			font-family: "Open Sans", Arial, sans-serif;
+		}
+		td {
+			padding: 0;
+			overflow: hidden;
+			border-collapse:collapse;
+			mso-table-lspace:0pt;
+			mso-table-rspace:0pt;
+		}
+		p,
+		p.MsoNormal {
+			Margin: 0pt;
+		}
+
+	img {
+		border: 0;
+	}
+	.wrapper {
+		width: 100%;
+		table-layout: fixed;
+		-webkit-text-size-adjust: 100%;
+		-ms-text-size-adjust: 100%;
+		background-color:#00aeef;
+	}
+	.webkit {
+		max-width: 600px;
+	}
+	.outer {
+		Margin: 0 auto;
+		width: 100%;
+		max-width: 600px;
+		background-color: #ffffff;
+	}
+	.spacer {
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+	.contents {
+		width: 100%;
+	}
+	a {
+		color: #00aeef;
+		text-decoration: underline;
+	}
+	.one-column .contents.centre, .two-column .contents.centre, .contents.centre, .centre {
+		text-align: center;
+	}
+
+	/* Padding */
+
+		/* General Padding */
+		.sb-padding {
+			padding-left: 10px;
+			padding-right: 10px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		/* End General Padding */
+
+		/* Tiny Padding */
+		.sb-padding-Bottom-Tiny {padding-bottom: 5px;}
+		/* End Tiny Padding */
+
+	/* End Padding */	
+
+	/* HEADINGS */
+	body .one-column .h1, body .two-column .h1, .contents.h1, .h1 {
+		font-size: 22px;
+		border-bottom: 1px solid #2f3131;
+		text-transform: uppercase;
+		text-align: center;
+		padding-bottom: 15px;
+		padding-top: 12px;
+	}
+	.contents.h1.slashes {
+		border-bottom: none;
+		padding-bottom: 7px;
+	}
+	.bg-Black .one-column .h1, .bg-Black .two-column .h1, .bg-Black .contents.h1, .bg-Black .h1 {
+		border-bottom: 1px solid #ffffff;
+	}
+	body .one-column .h1.brown {
+		border-bottom: 1px solid #9f8e78;	
+	}
+	body .one-column .h1.h1-colour {
+		Margin-bottom: 25px;
+	}
+	body .one-column .h1.no-underline, body .two-column .h1.no-underline {
+		border-bottom: none;
+	}
+	.h2 {
+		font-size: 18px;
+		font-weight: bold;
+		Margin-bottom: 12px;
+	}
+	/* END HEADINGS */
+
+
+	/* COLOURS */
+	.bg-black {
+		background-color: #303131;
+		color: #ffffff;
+	}
+	.bg-black .h2 {
+		color: #ffffff;
+	}		
+
+	.white {
+		color: #ffffff;
+	}
+	.bg-white {
+		background-color: #ffffff;
+	}
+	/* END COLOURS */
+
+	/* Background Image */
+	.bg-image--content {
+        text-align: center;
+	}
+    .bg-image--content .h1 {
+        font-size: 3.5rem;
+        border-bottom: none;
+    }
+    .bg-image--content .h2 {
+        font-size: 1.7rem;
+    }
+	/* END BACKGROUND IMAGE */
+
+
+		/* Variable Width Button */
+		.variable-Button {
+			padding-left: 20px;
+			padding-right: 20px;
+			width: auto !important;
+			max-width: auto !important;
+			background-color: #636363;
+			vertical-align: middle;
+			padding-top: 8px;
+			padding-bottom:8px;
+			color: #ffffff;
+			text-align:center;
+			text-transform: uppercase;
+		}
+		/* End Variable Width Button */
+
+
+
+	/* COLUMNS */
+		/* One column layout */
+		.one-column .contents {
+			text-align: left;
+		}
+		.one-column p {
+			font-size: 14px;
+			Margin-bottom: 10px;
+		}		
+
+
+		/* Full Width Images */
+		.full-width-image img {
+			width: 100%;
+			max-width: 600px;
+			height: auto;
+		}
+		.full-width-image.sb-padding {
+			width: 100%;
+			max-width: 580px;
+			height: auto;	
+		}
+		/* End Full Width Images */
+
+
+		/* Two column layout */
+		.two-column {
+			text-align: center;
+			font-size: 0;
+		}
+		.two-column .column {
+			width: 100%;
+			max-width: 300px;
+			display: inline-block;
+			vertical-align: top;
+		}
+		.two-column .contents  {
+			font-size: 14px;
+			text-align: left;
+		}
+		.two-column img {
+			width: 100%;
+			max-width: 280px;
+			height: auto;
+		}
+		.two-column .text {
+			padding-top: 10px;
+		}						
+		
+		/* 2 Columns */		
+
+			/* Logos */
+
+			.two-column .column-102 {
+				width: 102px;
+				max-width: 102px;
+			}
+			.two-column .column-102 img {
+				width: 100%;
+				max-width: 102px;
+			}
+			.two-column .column-498 {
+				width: 498px;
+				max-width: 498px;
+			}
+			.two-column .column-498 img {
+				width: 100%;
+				max-width: 498px;
+			}	
+			.logo .two-column a {
+			    font-size: 24px;
+			    text-align: right;
+			    text-decoration: none;
+			}			
+			.two-column .contents.info {
+			    text-align: right;
+			}			
+
+			/* End Logos */
+
+
+			/* Media Left & Right */
+
+			.two-column .column-290 {
+				width: 290px;
+				max-width: 290px;
+			}
+			.two-column .column-290 img {
+				width: 100%;
+				max-width: 280px;
+			}
+			.media .two-column .contents .h2 {
+				font-size: 17px;
+			}
+            .media-left .two-column .column-290 .contents {
+                padding-right: 10px;
+            }
+            .media-right .two-column .column-290 .contents {
+                padding-left: 10px;
+            }
+			/* End Media Left & Right */
+
+			/* Media small Left & Right */
+
+			.two-column .column-190 {
+				width: 190px;
+				max-width: 190px;
+			}
+			.two-column .column-190 img {
+				width: 100%;
+				max-width: 185px;
+			}
+			.two-column .column-390 {
+				width: 390px;
+				max-width: 390px;
+			}
+
+            .media-left .two-column .column-190 .contents {
+				padding-right: 10px;
+			}
+            .media-right .two-column .column-190 .contents {
+                padding-left: 10px;
+            }
+			.two-column .column-190 img {
+				width: 180px;				
+			}									
+			/* End Media small Left & Right */			
+
+																															
+		/* End 2 Columns */
+
+		/*Three column layout*/
+		.three-column {
+			text-align: center;
+			font-size: 0;
+		}
+		.three-column .column {
+			width: 100%;
+			max-width: 200px;
+			display: inline-block;
+			vertical-align: top;
+		}
+		.three-column img {
+			width: 100%;
+			max-width: 180px;
+			height: auto;
+		}
+		.three-column .contents {
+			font-size: 14px;
+			text-align: left;
+		}
+		.three-column .text {
+			padding-top: 10px;
+		}
+		.three-column .h2 {
+			text-transform: uppercase;
+			font-size: 13px;
+			font-weight: normal;
+		}
+
+
+
+		/*Media Queries*/
+		@media screen and (max-width: 400px) {
+			.two-column .column,
+			.two-column .column img  {
+				width: 100% !important;
+				max-width: 100% !important;
+			}
+			.two-column .column img {
+				text-align: center !important;
+			}			
+
+			.two-column.logos .column {
+				width: 50% !important;
+			}					
+			.two-column.logos .column img {
+				width: 100% !important;
+			}	
+
+				/* Logo */
+				.logo .two-column .column img {
+					width: 33% !important;
+					max-width: 33% !important;
+				}
+				.logo .two-column .column td {
+					text-align: center !important;
+				}
+				/* End Logo */
+				/* Media */
+				.two-column .column-290 img {
+					padding-bottom: 10px !important;
+				}
+				/* Media Small */
+				.two-column .column-190 img {
+					padding-right: 0 !important;
+					padding-bottom: 10px !important;					
+				}				
+				/* End Media Small */
+
+
+			/* Three Columns */
+			.three-column .column {
+				width: 100% !important;
+				max-width: 100% !important;
+			}
+			.three-column img {
+				width: 100% !important;
+				max-width: 100% !important;
+			}			
+			/* End Three Columns */
+		}
+
+
+		@media screen and (min-width: 401px) and (max-width: 620px) {
+			.three-column .column {
+				max-width: 33% !important;
+			}
+			.two-column .column {
+				max-width: 50% !important;
+			}																										
+		}		
+
+		/* iPhone 6+ */
+		@media screen and (max-device-width: 414px) and (max-device-height: 776px) and (-webkit-min-device-pixel-ratio: 3), 
+		(min-resolution: 288dpi) {
+			.two-column .column,
+			.two-column .column img  {
+				width: 100% !important;
+				max-width: 100% !important;
+			}
+			.two-column .column img {
+				text-align: center !important;
+			}
+			.two-column.logos .column {
+				width: 50% !important;
+			}
+			.two-column.logos .column img {
+				width: 100% !important;
+			}			
+
+
+				/* Logo */
+				.logo .two-column .column img {
+					width: 33% !important;
+					max-width: 33% !important;
+				}
+				.logo .two-column .column td {
+					text-align: center !important;
+				}
+				/* End Logo */
+				/* Media */
+				.two-column .column-290.head img {
+					padding-left: 0 !important;
+				}			
+				.two-column .column-290 img {
+					padding-bottom: 10px !important;
+				}					
+				/* Media Small */
+				.two-column .column-190.head img {
+					padding-left: 0 !important;
+				}				
+				.two-column .column-190 img {
+					padding-right: 0 !important;
+					padding-bottom: 10px !important;					
+				}				
+				/* End Media Small */			
+
+			/* Three Columns */
+			.three-column .column {
+				width: 100% !important;
+				max-width: 100% !important;
+			}
+			.three-column img {
+				width: 100% !important;
+				max-width: 100% !important;
+			}
+			/* End Three Columns */										
+		}			
+	</style>
+	<!--[if (gte mso 9)|(IE)]>
+	<style type="text/css">
+		table {border-collapse: collapse;}
+		table td {border-collapse: collapse;}
+	</style>
+	<![endif]-->
+	<!--[if mso]>
+	<style type="text/css">
+	body, table, td {font-family: Arial, Helvetica, sans-serif !important;}
+	</style>
+	<![endif]-->	
+</head>
+<body background="#00aeef" style="background-color:#00aeef;">
+	<center class="wrapper">
+		<div class="webkit">
+			<!--[if (gte mso 9)|(IE)]>
+			<table cellpadding="0" cellspacing="0" border="0" width="600" align="center">
+			<tr>
+			<td>
+			<![endif]-->
+			<table cellpadding="0" cellspacing="0" border="0" class="outer" align="center">
+				<tr>
+					<td>
+
+						<!-- Logo  -->
+						<div class="logo">
+							<table width="100%">
+								<tr>
+									<td class="two-column">
+										<!--[if (gte mso 9)|(IE)]>
+										<table width="100%">
+										<tr>
+										<td width="102" valign="top">
+										<![endif]-->
+										<div class="column column-102">
+											<table width="100%">
+												<tr>
+													<td class="sb-padding">
+														<table width="100%" class="contents">
+															<tr>
+																<td>
+																	<a href="http://www.squareballoon.co.uk"><!-- Square Balloon -->
+																		<img src="https://gallery.mailchimp.com/fa85a578f928f05fa5750d667/images/fdfb7c7f-e324-4232-8712-39c329fff5b3.png" width="102" alt="" class="logo" />
+																	</a>
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table>
+										</div>
+										<!--[if (gte mso 9)|(IE)]>
+										</td><td width="498" valign="top">
+										<![endif]-->
+										<div class="column column-498">
+											<table width="100%">
+												<tr>
+													<td class="sb-padding">
+														<table width="100%" class="contents info">
+															<tr>
+																<td class="info">
+																	<a href="tel:+442081232554">0208 123 2554</a><br />
+																	<a href="http://www.squareballoon.co.uk" style="font-size:14px;color:#2d3945">www.square<strong style="color:#00aeef;">balloon</strong>.co.uk</a>																 
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table>
+										</div>
+										<!--[if (gte mso 9)|(IE)]>
+										</td>
+										</tr>
+										</table>
+										<![endif]-->
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!-- End Logo -->
+
+						<!-- Full width background image with content.  Image is full width but 200px high -->
+                        <div mc:repeatable="options" mc:variant="Background image with text on top">
+                            <table cellpadding="0" cellspacing="0" border="0" height="200" width="100%">
+                                <tr>
+                                    <td background="https://i.imgur.com/YJOX1PC.png" bgcolor="#7bceeb" valign="top">
+                                        <!--[if gte mso 9]>
+                                        <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="mso-width-percent:1000;height:200px;">
+                                            <v:fill type="tile" src="https://i.imgur.com/YJOX1PC.png" color="#7bceeb" />
+                                            <v:textbox inset="0,0,0,0">
+                                        <![endif]-->
+                                        <div class="bg-image--content white">
+                                            <!-- CONTENT GOES HERE -->
+                                            <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                <tr>
+                                                    <td class="h1" mc:edit="background-image-h1">
+														Lorem ipsum dolor.
+													</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="h2" mc:edit="background-image-h2">
+														Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <!-- END CONTENT GOES HERE -->
+                                        </div>
+                                        <!--[if gte mso 9]>
+                                        </v:textbox>
+                                        </v:rect>
+                                        <![endif]-->
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+						<!-- END FULL WIDTH BACKGROUND IMAGE with text on top -->
+
+
+                        <!-- Full width Image -->
+						<div mc:repeatable="options" mc:variant="Full Width Image">
+							<table cellpadding="0" cellspacing="0" border="0" width="100%">
+								<tr>
+									<td class="full-width-image">
+										<img src="https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=600%C3%97200&amp;w=600&amp;h=200" width="600" alt="" mc:edit="Full Width Image" />
+									</td>
+								</tr>
+							</table>
+						</div>
+                        <!-- End Full Width Image -->
+
+
+                        <!-- Full width Image with padding -->
+						<div mc:repeatable="options" mc:variant="Full Width Image with padding">
+							<table cellpadding="0" cellspacing="0" border="0" width="100%">
+								<tr>
+									<td class="full-width-image sb-padding">
+										<img src="https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=580%C3%97200&amp;w=580&amp;h=200" width="580" alt="" mc:edit="Full Width Image with Gutter" />
+									</td>
+								</tr>
+							</table>
+						</div>
+                        <!-- End Full width Image with padding -->
+
+
+                        <!-- TEXT HEADING -->
+						<div mc:repeatable="options" mc:variant="Text Heading">
+							<table cellpadding="0" cellspacing="0" border="0" width="100%">
+								<tr>
+									<td class="sb-padding contents h1" mc:edit="Text Heading">
+										Lorum Heading Ipsum Dolorum
+									</td>
+								</tr>
+							</table>
+						</div>						
+						<!-- END TEXT HEADING -->
+
+						<!-- TEXT HEADING WITH SLASHES -->
+						<div mc:repeatable="options" mc:variant="Dark Blue Text Heading with slashes">
+							<table cellpadding="0" cellspacing="0" border="0" width="100%">
+								<tr>
+									<td class="sb-padding">
+										<table width="100%">
+											<tr>
+												<td class="contents h1 slashes" mc:edit="Dark Blue Text Heading with Slashes">
+													Lorum Heading Ipsum Dolorum
+												</td>
+											</tr>
+											<tr>
+												<td class="full-width-image">
+													<img src="https://gallery.mailchimp.com/fa85a578f928f05fa5750d667/images/4591f34e-cfdb-49d5-8b90-fe48a8f20bbd.png" height="16" width="580" alt="dark Blue Slashes" />
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>			
+							</table>
+						</div>						
+						<!-- END TEXT HEADING WITH SLASHES-->						
+
+						<!-- SINGLE COLUMN TEXT -->
+						<div mc:repeatable="options" mc:variant="Single Column Text">
+							<table cellpadding="0" cellspacing="0" border="0" width="100%">
+								<tr>
+									<td class="sb-padding contents" mc:edit="One Column Text">
+										Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+									</td>
+								</tr>
+							</table>
+						</div>						
+						<!-- END SINGLE COLUMN TEXT -->
+
+
+
+                        <!-- TWO COLUMN MEDIA ABOVE -->
+                        <div mc:repeatable="options" mc:variant="Media Above" class="media">
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                <tr>
+                                    <td class="two-column sb-padding">
+                                        <!--[if (gte mso 9)|(IE)]>
+                                        <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                            <tr>
+                                                <td width="290" valign="top">
+                                        <![endif]-->
+                                        <div class="column column-290">
+                                            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                                <tr>
+                                                    <td>
+														<table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                                            <tr>
+                                                                <td class="contents" mc:edit="Media Left Image">
+                                                                    <a href="#">
+                                                                        <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=280%C3%97191&w=280&h=191" alt="" width="280" height="191" />
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="contents h2 sb-padding-Bottom-Tiny"  mc:edit="Media Left Title">
+                                                                    Square Balloon are an extraordinary HTML email Design company
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="contents" mc:edit="Media Left Body">
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <!--[if (gte mso 9)|(IE)]>
+                                        </td><td width="290" valign="top">
+                                        <![endif]-->
+                                        <div class="column column-290">
+                                            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                                <tr>
+                                                    <td>
+														<table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                                            <tr>
+                                                                <td class="contents" mc:edit="Media Right Image">
+                                                                    <a href="#">
+                                                                        <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=280%C3%97191&w=280&h=191" alt="" width="280" height="191" />
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="contents h2 sb-padding-Bottom-Tiny"  mc:edit="Media Right Title">
+                                                                    Square Balloon are an extraordinary HTML email Design company
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="contents" mc:edit="Media Right Body">
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <!--[if (gte mso 9)|(IE)]>
+                                        </td>
+                                        </tr>
+                                        </table>
+                                        <![endif]-->
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <!-- END TWO COLUMN MEDIA ABOVE -->
+
+
+						<!-- TWO COLUMN MEDIA LEFT -->					
+						<div mc:repeatable="options" mc:variant="Media Left" class="media media-left">
+							<table cellpadding="0" cellspacing="0" border="0" width="100%">
+								<tr>
+									<td class="two-column sb-padding">
+										<!--[if (gte mso 9)|(IE)]>
+										<table cellpadding="0" cellspacing="0" border="0" width="100%">
+										<tr>
+										<td width="290" valign="top">
+										<![endif]-->
+											<div class="column column-290">
+												<table cellpadding="0" cellspacing="0" border="0" width="100%">
+													<tr>
+														<td>
+															<table width="100%">
+																<tr>
+																	<td class="contents" mc:edit="Media Left Image">
+																	<a href="#">
+																		<img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=280%C3%97191&w=280&h=191" alt="" width="280" height="191" />
+																	</a>
+																	</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table>
+											</div>
+										<!--[if (gte mso 9)|(IE)]>
+										</td><td width="290" valign="top">
+										<![endif]-->
+										<div class="column column-290">
+											<table cellpadding="0" cellspacing="0" border="0" width="100%">
+												<tr>
+													<td>
+														<table cellpadding="0" cellspacing="0" border="0" width="100%" class="contents">
+															<tr>
+																<td>
+																	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+																		<tr>
+																			<td class="contents h2 sb-padding-Bottom-Tiny"  mc:edit="Media Left Title">
+																				Square Balloon are an extraordinary HTML email Design company
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="contents" mc:edit="Media Left Body">
+																				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table>
+										</div>
+										<!--[if (gte mso 9)|(IE)]>
+										</td>
+										</tr>
+										</table>
+										<![endif]-->
+									</td>
+								</tr>
+							</table>
+						</div>
+
+						<!-- END TWO COLUMN MEDIA LEFT -->
+
+
+						<!-- TWO COLUMN MEDIA RIGHT -- works on mobile without responsive -->
+						<div mc:repeatable="options" mc:variant="Media Left" class="media media-left">
+							<table cellpadding="0" cellspacing="0" border="0" width="100%">
+								<tr>
+									<td class="two-column sb-padding" dir="rtl">
+										<!--[if (gte mso 9)|(IE)]>
+										<table cellpadding="0" cellspacing="0" border="0" width="100%">
+											<tr>
+												<td width="290" valign="top">
+										<![endif]-->
+													<div class="column column-290">
+														<table cellpadding="0" cellspacing="0" border="0" width="100%">
+															<tr>
+																<td>
+																	<table width="100%">
+																		<tr>
+																			<td class="contents" mc:edit="Media Left Image">
+																				<a href="#">
+																					<img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=280%C3%97191&w=280&h=191" alt="" width="280" height="191" />
+																				</a>
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+														</table>
+													</div>
+										<!--[if (gte mso 9)|(IE)]>
+										</td><td width="290" valign="top">
+										<![endif]-->
+										<div class="column column-290">
+											<table cellpadding="0" cellspacing="0" border="0" width="100%">
+												<tr>
+													<td>
+														<table cellpadding="0" cellspacing="0" border="0" width="100%" class="contents">
+															<tr>
+																<td dir="ltr">
+																	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+																		<tr>
+																			<td class="contents h2 sb-padding-Bottom-Tiny"  mc:edit="Media Left Title">
+																				Square Balloon are an extraordinary HTML email Design company
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="contents" mc:edit="Media Left Body">
+																				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table>
+										</div>
+										<!--[if (gte mso 9)|(IE)]>
+										</td>
+										</tr>
+										</table>
+										<![endif]-->
+									</td>
+								</tr>
+							</table>
+						</div>
+
+						<!-- END TWO COLUMN MEDIA RIGHT -->	
+
+
+						<!-- TWO COLUMN MEDIA LEFT small -->					
+						<div mc:repeatable="options" mc:variant="Media Left Small" class="media media-left">
+							<table cellpadding="0" cellspacing="0" border="0" width="100%">
+								<tr>
+									<td class="two-column sb-padding">
+										<!--[if (gte mso 9)|(IE)]>
+										<table cellpadding="0" cellspacing="0" border="0" width="100%">
+										<tr>
+										<td width="190" valign="top">
+										<![endif]-->
+										<div class="column column-190">
+											<table cellpadding="0" cellspacing="0" border="0" width="100%">
+												<tr>
+													<td>
+														<table width="100%">	
+															<tr>
+																<td class="contents" mc:edit="Media Left Image">
+																<a href="#">
+																	<img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=180%C3%97120&w=180&h=120" alt="" width="180" height="120" />
+																</a>
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table>
+										</div>
+										<!--[if (gte mso 9)|(IE)]>
+										</td><td width="390" valign="top">
+										<![endif]-->
+										<div class="column column-390">
+											<table cellpadding="0" cellspacing="0" border="0" width="100%">
+												<tr>
+													<td>
+														<table cellpadding="0" cellspacing="0" border="0" width="100%" class="contents">
+															<tr>
+																<td>
+																	<table width="100%">
+																		<tr>
+																			<td class="contents h2 sb-padding-Bottom-Tiny"  mc:edit="Media Left Title">
+																				Square Balloon are an extraordinary HTML email Design company
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="contents" mc:edit="Media Left Body">
+																				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table>
+										</div>
+										<!--[if (gte mso 9)|(IE)]>
+										</td>
+										</tr>
+										</table>
+										<![endif]-->
+									</td>
+								</tr>
+							</table>
+						</div>
+
+						<!-- END TWO COLUMN MEDIA LEFT small -->	
+
+
+						<!-- TWO COLUMN MEDIA RIGHT Small -->
+						<div mc:repeatable="options" mc:variant="Media Right Small" class="media media-right">
+							<table cellpadding="0" cellspacing="0" border="0" width="100%">
+								<tr>
+									<td class="two-column sb-padding" dir="rtl">
+										<!--[if (gte mso 9)|(IE)]>
+										<table cellpadding="0" cellspacing="0" border="0" width="100%">
+											<tr>
+												<td width="190" valign="top">
+										<![endif]-->
+										<div class="column column-190">
+											<table cellpadding="0" cellspacing="0" border="0" width="100%">
+												<tr>
+													<td>
+														<table width="100%">
+															<tr>
+																<td class="contents" mc:edit="Media Right Image">
+																	<a href="#">
+																		<img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=180%C3%97120&w=180&h=120" alt="" width="180" height="120" />
+																	</a>
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table>
+										</div>
+										<!--[if (gte mso 9)|(IE)]>
+										</td><td width="390" valign="top">
+										<![endif]-->
+										<div class="column column-390">
+											<table cellpadding="0" cellspacing="0" border="0" width="100%">
+												<tr>
+													<td>
+														<table cellpadding="0" cellspacing="0" border="0" width="100%" class="contents">
+															<tr>
+																<td dir="ltr">
+																	<table width="100%">
+																		<tr>
+																			<td class="contents h2 sb-padding-Bottom-Tiny"  mc:edit="Media Right Title">
+																				Square Balloon are an extraordinary HTML email Design company
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="contents" mc:edit="Media Right Body">
+																				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table>
+										</div>
+										<!--[if (gte mso 9)|(IE)]>
+										</td>
+										</tr>
+										</table>
+										<![endif]-->
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!-- END TWO COLUMN MEDIA RIGHT small -->
+
+
+						<!-- Three Columns -->
+						<div mc:repeatable="options" mc:variant="Three Columns">
+							<table width="100%">
+								<tr>
+									<td class="three-column">
+										<!--[if (gte mso 9)|(IE)]>
+										<table width="100%">
+										<tr>
+										<td width="200" valign="top">
+										<![endif]-->
+										<table class="column">
+											<tr>
+												<td class="sb-padding">
+													<table class="contents right">
+														<tr>
+															<td>
+																<img src="https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=180%C3%97120&amp;w=180&amp;h=120" width="180" alt="" mc:edit="3col_lft" />
+															</td>
+														</tr>
+														<tr>
+															<td class="text" mc:edit="3col_lft_main_body">
+																Scelerisque congue eros eu posuere. Praesent in felis ut velit pretium lobortis rhoncus ut erat. 1
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</table>
+										<!--[if (gte mso 9)|(IE)]>
+										</td><td width="200" valign="top">
+										<![endif]-->
+										<table class="column left">
+											<tr>
+												<td class="sb-padding">
+													<table class="contents">
+														<tr>
+															<td>
+																<img src="https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=180%C3%97120&amp;w=180&amp;h=120" width="180" alt="" mc:edit="3col_center" />
+															</td>
+														</tr>
+														<tr>
+															<td class="text" mc:edit="3col_Center_main_body">
+																Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. 2
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</table>
+										<!--[if (gte mso 9)|(IE)]>
+										</td><td width="200" valign="top">
+										<![endif]-->
+										<table class="column">
+											<tr>
+												<td class="sb-padding">
+													<table class="contents">
+														<tr>
+															<td>
+																<img src="https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=180%C3%97120&amp;w=180&amp;h=120" width="180" alt="" mc:edit="3col_rgth" />
+															</td>
+														</tr>
+														<tr>
+															<td class="text" mc:edit="3col_rght_main_body">
+																Praesent laoreet malesuada cursus. Maecenas scelerisque congue eros eu posuere. 3
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</table>
+										<!--[if (gte mso 9)|(IE)]>
+										</td>
+										</tr>
+										</table>
+										<![endif]-->
+									</td>
+								</tr>
+							</table>
+						</div>		
+						<!-- End Three Columns -->
+
+
+						<!-- One button with a variable width that stretches to fit the words and contains padding -->
+						<div mc:repeatable="options" mc:variant="One Variable Width Button">
+							<table cellpadding="0" cellspacing="0" border="0" width="100%">
+								<tr>
+									<td class="one-column">
+										<div class="column">
+											<table cellpadding="0" cellspacing="0" border="0" width="100%">
+												<tr>
+													<td class="sb-Padding-Top">
+														<table cellpadding="0" cellspacing="0" border="0" width="100%" class="contents">
+															<tr>
+																<td class="contents sb-Padding">
+																	<table cellpadding="0" cellspacing="0" border="0" width="100%" style="table-layout: auto;">
+																		<tr>
+																			<td style="width: 1%; white-space: nowrap;">
+																				<center>
+																					<table cellpadding="0" cellspacing="0" border="0">
+																						<tr>
+																							<td class="text bg-Brown variable-Button">
+																								<a href="http://www.venturefounders.co.uk" mc:edit="Variable Button">
+																									As many characters as you want
+																								</a>
+																							</td>
+																						</tr>
+																					</table>
+																				</center>
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!-- End One button with a variable width that stretches to fit the words and contains padding -->
+
+
+
+						<!-- Full width slashes blue -->
+						<div mc:repeatable="options" mc:variant="Full Width Slashes Blue">
+							<table width="100%">
+								<tr>
+									<td class="full-width-image sb-padding">
+										<img src="https://gallery.mailchimp.com/fa85a578f928f05fa5750d667/images/a6366ce7-8178-4576-a17a-562c7349c2d1.png" height="16" width="580" alt="Blue Slashes" />
+									</td>
+								</tr>
+							</table>							
+						</div>
+						<!-- End Full width slashes blue -->
+
+
+						<!-- Full width slashes dark blue -->
+						<div mc:repeatable="options" mc:variant="Full Width Slashes Dark Blue">
+							<table width="100%">
+								<tr>
+									<td class="full-width-image sb-padding">
+										<img src="https://gallery.mailchimp.com/fa85a578f928f05fa5750d667/images/4591f34e-cfdb-49d5-8b90-fe48a8f20bbd.png" height="16" width="580" alt="dark Blue Slashes" />
+									</td>
+								</tr>
+							</table>							
+						</div>
+						<!-- End Full width slashes dark blue -->						
+
+
+
+
+						<table width="100%" mc:repeatable="options" mc:variant="Spacer">
+							<tr>
+								<td class="spacer">&nbsp;</td>
+							</tr>
+						</table>
+
+
+					<table width="100%" style="background-color:#ebebeb" bgcolor="#ebebeb">
+						<tr>
+							<td class="spacer">&nbsp;</td>
+						</tr>
+					</table>
+
+					<!-- Footer -->
+					<div>
+						<table width="100%" style="width:100%;max-width:600px;">
+							<tr>
+								<td class="inner footer" style="background-color:#ebebeb;width:100%;max-width:600px;">
+									<table width="100%">
+										<tr>
+											<td class="one-column-colour inner" style="font-size: 12px;text-align:center;text-decoration:none;">
+												T: <a href="tel:+441223766141" style="text-decoration:none;">+44 (0) 208 123 2554</a> E: <a href="mailto:eoin@squareballoon.co.uk" style="text-decoration:none;">info@squareballoon.co.uk</a>
+											</td>
+										</tr>
+										<tr><td>&nbsp;</td></tr>				
+										<tr>
+											<td class="one-column-colour inner" style="font-size: 12px;text-align:center;text-decoration:none;">
+												<a href="https://plus.google.com/+SquareballoonCoUk" style="text-decoration:none">
+													<img src="https://gallery.mailchimp.com/111902135bf559b2e61d69046/images/0ef0dbff-1ce6-41e6-94ce-6ecc869f9a17.png" alt="Google+" width="35" style="width:35px;" />
+												</a>
+												<a href="https://www.facebook.com/squareballoon.co.uk/#" style="text-decoration:none">
+													<img src="https://gallery.mailchimp.com/111902135bf559b2e61d69046/images/ce9aa652-0f99-40b0-ae4f-470aaec3c903.png" alt="Facebook" width="35" style="width:35px;" />
+												</a>
+												<a href="https://www.instagram.com/squareballoon/" style="text-decoration:none">
+													<img src="https://gallery.mailchimp.com/111902135bf559b2e61d69046/images/cdd61425-ffc5-47ed-9c74-c9a9cce7e080.png" alt="Instagram" width="35" style="width:35px;" />
+												</a>
+												<a href="https://www.youtube.com/channel/UCDMDQomkFd-3x-8l2UT3JPg" style="text-decoration:none">
+													<img src="https://gallery.mailchimp.com/111902135bf559b2e61d69046/images/069aaba2-f9c8-484c-90af-39b19fa69dc5.png" alt="YouTube" width="35" style="width:35px;" />
+												</a>
+												<a href="https://twitter.com/imsquareballoon" style="text-decoration:none">
+													<img src="https://gallery.mailchimp.com/111902135bf559b2e61d69046/images/90a04d58-96cd-4003-b54a-757a428b25f9.png" alt="Twitter" width="35" style="width:35px;" />																							
+												</a>													
+											</td>
+										</tr>
+										<tr><td>&nbsp;</td></tr>															
+										<tr>
+											<td class="one-column-colour inner" style="font-size: 12px;text-align:center;width:100%;padding-bottom:5px;text-decoration:none;">
+												Onion Marketing Ltd trading as Square Balloon,<br />Atlantis House, 15 Mount Pleasant Rd, Chigwell, Essex, IG7 5EP.
+											</td>
+										</tr>	
+										<tr>
+											<td class="one-column-colour" style="font-size: 12px;text-align:center;">
+												Copyright © Onion Marketing Ltd, All rights reserved.
+											</td>
+										</tr>	
+										<tr><td>&nbsp;</td></tr>
+										<tr>
+											<td class="one-column-colour inner" style="font-size: 12px;text-align:center;text-decoration:none;">
+												<a href="*|UPDATE_PROFILE|*">Preferences</a> - <a href="*|ARCHIVE|*">View in Browser</a> - <a href="*|UNSUB|*">Unsubscribe</a>
+											</td>
+										</tr>																				
+									</table>
+								</td>
+							</tr>
+						</table>
+					</div>	
+					<!-- End Footer -->	
+
+					<table width="100%" style="background-color:#ebebeb" bgcolor="#ebebeb">
+						<tr>
+							<td class="spacer">&nbsp;</td>
+						</tr>
+					</table>														
+
+						<table cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color:#00aeef" bgcolor="#00aeef">
+							<tr><td>&nbsp;</td></tr>
+							<tr><td>&nbsp;</td></tr>
+							<tr><td>&nbsp;</td></tr>																
+							<tr>
+								<td width="100%" style="font-size:11px;text-align:center;width:100%;color:#2d3945;text-decoration:none;" class="sb-padding">
+									<a href="http://www.squareballoon.co.uk" style="font-size:11px;text-align:center;width:100%;color:#2d3945;text-decoration:none;background-color: #ffffff;border-top: 3px solid #ffffff;border-left: 3px solid #ffffff;border-bottom: 3px solid #ffffff;">&nbsp;&nbsp;&nbsp;HTML Email Coded by Square</a><a href="http://www.squareballoon.co.uk" style="font-size:11px;text-align:center;width:100%;color:#00aeef;font-weight:bold;text-decoration:none;border-top: 3px solid #ffffff;border-right: 3px solid #ffffff;border-bottom: 3px solid #ffffff;background-color:#ffffff;">Balloon&nbsp;&nbsp;&nbsp;</a>
+								</td>
+							</tr>
+							<tr><td>&nbsp;</td></tr>								
+						</table>
+
+					</td>
+				</tr>
+			</table>
+			<!--[if (gte mso 9)|(IE)]>
+			</td>
+			</tr>
+			</table>
+			<![endif]-->
+		</div>
+	</center>
+</body>
+</html>
